@@ -35,15 +35,13 @@ while True:
         reply_num = t_id["reply_num"]
         # print t_id
 
-        # if author_name == "华科大粽子" and reply_num == 0:
-        #    print "华科大粽子",
+        # if author_name == "看见加加减减" and reply_num == 0:
+        #    print "看见加加减减",
         #    print id
         if reply_num == 0:
-            # author_name == "我叫红领巾800":
-            # print "我叫红领巾800",
             print '贴号:' + str(id) + ',' + str(reply_num)
             # login.post()
-            # 把标题扣出来,又得来一遍
+            # 把标题扣出来
             title_match = "/p/" + str(id)
             # print title_match
             title = page.find_all('a', attrs={'href': re.compile(title_match)})
