@@ -60,9 +60,3 @@ while True:
             # if reply_num == 0:
             #    print "reply_0",
             #    print id
-    i = 1
-    i = i + 1
-
-    if i == 10:
-        break
-    time.sleep(30)
