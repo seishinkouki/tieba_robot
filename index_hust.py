@@ -26,7 +26,7 @@ while True:
     title_after = 'title="'
     for t_list in li_list:
         a = str(t_list)
-        a = a[:a.index(before)]
+        b = a[:a.index(before)]
         t_json = a[a.index(after) + len(after):]
         # 写入json
         t_id = json.loads(t_json)
@@ -38,7 +38,8 @@ while True:
         # if author_name == "看见加加减减" and reply_num == 0:
         #    print "看见加加减减",
         #    print id
-        if reply_num == 0:
+        #  筛选掉视频贴,符合哈巴基本法
+        if reply_num == 0 and a.find("video") == -1:
             print '贴号:' + str(id) + ',' + str(reply_num)
             # login.post()
             # 把标题扣出来
