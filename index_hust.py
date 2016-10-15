@@ -42,11 +42,11 @@ while True:
         if reply_num == 0 and a.find("video") == -1:
             print '贴号:' + str(id) + ',' + str(reply_num)
             # login.post()
-            # 把标题扣出来
+            
             title_match = "/p/" + str(id)
             # print title_match
             title = page.find_all('a', attrs={'href': re.compile(title_match)})
-            # 只有一个元素的数组
+            
             title = str(title[0])
             title = title[:title.index(title_before)]
             title = title[title.index(title_after) + len(title_after):]
