@@ -8,7 +8,7 @@ sys.setdefaultencoding('utf-8')
 
 def post_text(post_info):
 
-    payload = {"key": "e0637837c37c0db6afa12ffff6369bb8", "info": post_info}
+    payload = {"key": "这个地方放你的图灵key", "info": post_info}
 
     r = requests.post("http://www.tuling123.com/openapi/api", data=payload)
     r = r.text
