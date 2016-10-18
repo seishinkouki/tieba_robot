@@ -25,9 +25,14 @@ def reply(reply_text, tid):
     huitie_data = str2dic(huitie_data_text)
     huitie_data['content'] = reply_text
     huitie_data['tid'] = tid
-    huitie_data['tbs'] = '这个地方放你的tbs'
+    # huitie_data['tbs'] = '这个地方放你的tbs'
     c_cookies = {
          'BDUSS': '这个地方放你的BDUSS'}
+    # 增加自动获取tbs,tbs必须带cookies获取,并且一段时间后会失效
+    url = 'http://tieba.baidu.com/dc/common/tbs'
+    r_tbs = requests.get(url, cookies=c_cookies)
+    r_tbs = json.loads(r_tbs.text)
+    huitie_data['tbs'] = r_tbs["tbs"]
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36',
         'Referer': 'http://tieba.baidu.com/p/4811894587'}
