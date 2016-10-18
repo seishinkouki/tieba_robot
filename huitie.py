@@ -25,7 +25,7 @@ def reply(reply_text, tid):
     huitie_data = str2dic(huitie_data_text)
     huitie_data['content'] = reply_text
     huitie_data['tid'] = tid
-    # huitie_data['tbs'] = '这个地方放你的tbs'
+    
     c_cookies = {
          'BDUSS': '这个地方放你的BDUSS'}
     # 增加自动获取tbs,tbs必须带cookies获取,并且一段时间后会失效
