@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf-8')
 
 
 # 新浪cookies关键值SUB, 类似BDUSS
-cookies = 'SUB=_2A251EPKKDeTxGeRH4lUU8yfNyz-IHXVW-p7CrDV6PUNbktAKLRLMkW0hVBJjA0wHxBU2R0KkiYuwbeJ97A..'
+cookies = 'SUB=你的新浪微博SUB'
 
 
 def postMsg(msg):
